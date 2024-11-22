@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure it stays behind other content */
+}
+
+#weather-container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    padding: 40px; /* Padding around the container */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    max-width: 450px; /* Maximum width of the container */
+    margin: auto; /* Center the container */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align children */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for glass effect */
+}
+
+
+h2, label, p {
+    color: #e0e0e0; /* Lighter text color for contrast */
+    margin: 8px 0;
+}
+
+input {
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #ffffff; /* Darker border */
+    background: rgba(255, 255, 255, 0.1); /* Darker input background */
+    color: #fff; /* White text in input */
+    margin-top: 20px;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #171717;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #fff; /* Dark button background */
+    color: #000; /* Slightly lighter on hover */
+}
+
+#temp-div p {
+    font-size: 60px;
+    margin-top: -30px;
+    color: #f1c40f; /* Bright color for temperature */
+}
+
+#weather-info {
+    font-size: 20px;
+    color: #e0e0e0; /* Lighter text color */
+}
+
+#weather-icon {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px; 
+    margin-bottom: 0;
+    display: none;
+}
+
+#hourly-forecast {
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-item {
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    color: #e0e0e0; /* Lighter text color */
+}
+
+.hourly-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading {
+    color: #e0e0e0; /* Lighter heading color */
+    margin-top: 10px;
+}
